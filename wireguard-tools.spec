@@ -1,11 +1,11 @@
 Name:           wireguard-tools
-Version:        1.0.20210424
-Release:        1
+Version:        1.0.20210914
+Release:        2
 URL:            https://www.wireguard.com/
 Summary:        Fast, modern, secure VPN tunnel
 License:        GPLv2
 
-Source0:        https://git.zx2c4.com/%{name}/snapshot/%{name}-%{version}.tar.xz
+Source0:        https://git.zx2c4.com/wireguard-tools/snapshot/wireguard-tools-%{version}.tar.xz
 
 %{?systemd_requires}
 BuildRequires: make
@@ -55,5 +55,10 @@ WITH_BASHCOMPLETION=yes WITH_WGQUICK=yes WITH_SYSTEMDUNITS=yes -C src
 %{_mandir}/man8/wg-quick.8*
 
 %changelog
+* Mon Feb 14 2022 yuekis <i@ykis.moe> - 1.0.20210914-1
+- Update to 1.0.20210914
+- The wireguard-tools-1.0.20210914.tar.xz file is from https://koji.fedoraproject.org/koji/buildinfo?buildID=1902250 by author Joe Doss <joe@solidadmin.com>
+
 * Mon Dec 27 2021 duyiwei <duyiwei@kylinos.cn> - 1.0.20210424-1
 - Package init
+
